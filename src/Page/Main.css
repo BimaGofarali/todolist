@@ -1,0 +1,66 @@
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 43px 0 55px;
+}
+
+.todo-header .h1, .todo-header h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.todo-header .btn {
+    min-width: 170px;
+    background-color: #16abf8;
+    width: 170px;
+    height: 54px;
+    border-radius: 45px;
+    border: 0;
+    padding: 13.5px 29px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+span{
+    margin-right: 1rem;
+}
+
+/* Card */
+
+.activity-card {
+    height: 234px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 22px 27px;
+    margin-bottom: 26px;
+    position: relative;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 15%);
+}
+.activity-body {
+    cursor: pointer;
+    height: 158px;
+}
+.activity-body h4 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card-footer {
+    position: absolute;
+    z-index: 2;
+    bottom: 1.3rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+    width: calc(100% - 54px);
+    padding: 0;
+}
+.activity-card .card-footer span {
+    color: #888;
+}
+
+.item-delete {
+    cursor: pointer;
+}
