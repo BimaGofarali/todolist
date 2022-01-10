@@ -1,73 +1,117 @@
 .todo-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .todo-title {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .todo-header .todo-title h1 {
-    margin-bottom: 0;
-    max-width: 583px;
-    font-size: 36px;
-    font-weight: 700;
+  margin-bottom: 0;
+  max-width: 583px;
+  font-size: 36px;
+  font-weight: 700;
 }
 
 .todo-header .todo-title .icon-back {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 .icon-back {
-    width: 32px;
+  width: 32px;
 }
-.icon-back, .icon-edit-p {
-    background-repeat: no-repeat;
-    background-size: 100%;
-    display: inline-block;
-    vertical-align: middle;
-    cursor: pointer;
+.icon-back,
+.icon-edit-p {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 .todo-header .todo-title .icon-edit-h {
-    margin-left: 27px;
+  margin-left: 27px;
 }
 
 .btn.btn-primary {
-    background-color: #16abf8;
+  background-color: #16abf8;
 }
 
 .todo-header .btn {
-    width: 170px;
-    height: 54px;
-    min-width: 170px;
-
+  width: 170px;
+  height: 54px;
+  min-width: 170px;
 }
 .avatar {
-    margin-top: 1.6rem;
-    width: 2.4rem;
-    border-radius: 50%;
-    border: solid 3px white;
-    margin-right: 18px;
-    background-color: transparent;
+  margin-top: 1.6rem;
+  width: 2.4rem;
+  border-radius: 50%;
+  border: solid 3px white;
+  margin-right: 18px;
+  background-color: transparent;
 }
 
 .avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-.d-flex{
-    align-items: center;
+.d-flex {
+  align-items: center;
 }
 
 .detail-content .empty-item {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-img, svg {
-    vertical-align: middle;
+img,
+svg {
+  vertical-align: middle;
+}
+
+/* tododetail */
+
+.content-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 27px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 15%);
+}
+
+.form-check input {
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  border: 1px solid #c7c7c7;
+}
+
+.label-indicator {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  margin: 0 19px 0 7px;
+}
+
+.content-item span {
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 16px;
+}
+
+.icon-edit-p {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
 }

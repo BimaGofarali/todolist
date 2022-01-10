@@ -2,14 +2,22 @@ import {
   GET_TODO_BEGIN,
   GET_TODO_SUCCESS,
   GET_TODO_FAIL,
+  GET_DETAIL_TODO_BEGIN,
+  GET_DETAIL_TODO_SUCCESS,
+  GET_DETAIL_TODO_FAIL,
   DELETE_TODO_BEGIN,
   DELETE_TODO_SUCCESS,
-  DELETE_TODO_FAIL
+  DELETE_TODO_FAIL,
 } from "../action/type";
 
 const initialState = {
   listTodo: {
     todo: [],
+    loading: false,
+    error: null,
+  },
+  detailTodo: {
+    detail: [],
     loading: false,
     error: null,
   },
@@ -46,23 +54,50 @@ const reducerTodo = (state = initialState, action) => {
           error: error,
         },
       };
-      case DELETE_TODO_BEGIN :
-            return {
-                ...state,
-                loading : true,
-            };
-        case DELETE_TODO_SUCCESS :
-            return {
-                ...state,
-                loading : false,
-                error : null,
-            };
-        case DELETE_TODO_FAIL :
-            return {
-                ...state,
-                loading : false,
-                error : error,
-            }
+
+    case GET_DETAIL_TODO_BEGIN:
+      return {
+        ...state,
+        detailMovie: {
+          loading: true,
+          error: null,
+        },
+      };
+    case GET_DETAIL_TODO_SUCCESS:
+      return {
+        ...state,
+        detailMovie: {
+          detail: payload,
+          loading: false,
+          error: null,
+        },
+      };
+    case GET_DETAIL_TODO_FAIL:
+      return {
+        ...state,
+        detailMovie: {
+          detail: [],
+          loading: false,
+          error: error,
+        },
+      };
+    case DELETE_TODO_BEGIN:
+      return {
+        ...state,
+        loading: true,
+      };
+    case DELETE_TODO_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        error: null,
+      };
+    case DELETE_TODO_FAIL:
+      return {
+        ...state,
+        loading: false,
+        error: error,
+      };
   }
 };
 
